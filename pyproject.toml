@@ -8,5 +8,5 @@ authors = [
     {name = "Roger-luo", email = "rogerluo.rl18@gmail.com"},
 ]
 dependencies = []
-requires-python = ">=3.11"
+requires-python = ">=3.10"
 license = {text = "MIT"}
