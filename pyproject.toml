@@ -8,13 +8,7 @@ authors = [
     {name = "Roger-luo", email = "rogerluo.rl18@gmail.com"},
 ]
 dependencies = [
-    "juliacall>=0.9.12",
     "numpy>=1.24.2",
-    "matplotlib>=3.7.1",
-    "pydantic>=1.10.7",
-    "quera-ahs-utils>=0.4.0",
-    "pandas>=2.0.1",
-    "seaborn>=0.12.2",
 ]
 requires-python = ">=3.10"
 license = {text = "MIT"}
