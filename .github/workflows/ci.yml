@@ -19,13 +19,15 @@ jobs:
         uses: actions/setup-python@v4
         with:
           python-version: ${{ matrix.python-version }}
-      - uses: pdm-project/setup-pdm@v3
-        name: Setup PDM
-        with:
-          python-version: ${{ matrix.python-version }}  # Version range or exact version of a Python version to use, the same as actions/setup-python
-          cache: true
-          # well we use virtualenv here
-          # prerelease: true     # Allow prerelease versions to be installed
-          # enable-pep582: true  # Enable PEP 582 package loading globally
+      - name: Install PDM using Pip
+        run: pip install --user pdm
+      # - uses: pdm-project/setup-pdm@v3
+      #   name: Setup PDM
+      #   with:
+      #     python-version: ${{ matrix.python-version }}  # Version range or exact version of a Python version to use, the same as actions/setup-python
+      #     cache: true
+      #     # well we use virtualenv here
+      #     # prerelease: true     # Allow prerelease versions to be installed
+      #     # enable-pep582: true  # Enable PEP 582 package loading globally
       - name: Install dependencies
         run: pdm install -v       # Then you can use pdm in the following steps.
