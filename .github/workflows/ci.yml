@@ -20,7 +20,9 @@ jobs:
         with:
           python-version: ${{ matrix.python-version }}
       - name: Install PDM using Pip
-        run: pip install --user pdm requests<=2.29
+        run: |
+        pip install requests<=2.29
+        pip install --user pdm
       # - uses: pdm-project/setup-pdm@v3
       #   name: Setup PDM
       #   with:
